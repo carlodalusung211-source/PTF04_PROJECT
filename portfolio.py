@@ -828,7 +828,7 @@ def page_cifar():
                     from tensorflow.keras.models import load_model
                     @st.cache_resource
                     def load_cifar():
-                        return load_model("cnn_model.keras")
+                        return load_model("cnn_model.h5")
                     cifar_model = load_cifar()
                     img_arr = np.array(img.resize((32,32))) / 255.0
                     pred = cifar_model.predict(np.expand_dims(img_arr, 0), verbose=0)[0]
