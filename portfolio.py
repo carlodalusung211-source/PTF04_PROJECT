@@ -25,10 +25,24 @@ html, body, [class*="css"] {
 #MainMenu, footer, header { visibility: hidden; }
 .block-container { padding: 0 !important; max-width: 100% !important; }
 
-/* ── Hide the sidebar collapse/expand button entirely ── */
+/* ── Force sidebar always open ── */
 [data-testid="collapsedControl"] { display: none !important; }
-button[kind="header"] { display: none !important; }
 [data-testid="stSidebarCollapseButton"] { display: none !important; }
+section[data-testid="stSidebar"] { 
+    transform: none !important;
+    width: 272px !important;
+    min-width: 272px !important;
+    max-width: 272px !important;
+    left: 0 !important;
+    visibility: visible !important;
+    display: flex !important;
+}
+section[data-testid="stSidebar"][aria-expanded="false"] {
+    transform: none !important;
+    margin-left: 0 !important;
+    width: 272px !important;
+    min-width: 272px !important;
+}
 
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: #090b10; }
