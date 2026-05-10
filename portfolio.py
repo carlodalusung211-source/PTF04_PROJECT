@@ -25,6 +25,11 @@ html, body, [class*="css"] {
 #MainMenu, footer, header { visibility: hidden; }
 .block-container { padding: 0 !important; max-width: 100% !important; }
 
+/* ── Hide the sidebar collapse/expand button entirely ── */
+[data-testid="collapsedControl"] { display: none !important; }
+button[kind="header"] { display: none !important; }
+[data-testid="stSidebarCollapseButton"] { display: none !important; }
+
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: #090b10; }
 ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 2px; }
